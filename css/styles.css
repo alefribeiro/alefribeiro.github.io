@@ -85,6 +85,72 @@
     display: none;
 }
 
+@media (max-width: 912px) {
+
+    .scoreDiv{
+        margin-top: 5%;
+        margin-left: 35%;
+    }
+    .screenOver{
+
+
+        margin-top: 5%;
+        margin-left: 25%;
+        
+    }
+    /* .invisible{
+        display: none;
+    } */
+}
+
+@media (max-width:540px) {
+    .scoreDiv{
+        margin-top: 5%;
+        margin-left: 35%;
+    }
+    .screenOver{
+
+        margin-top: 5%;
+        margin-left: 13%;
+        
+    }
+    
+}
+
+@media(max-width: 414px){
+    .scoreDiv{
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+    .screenOver{
+
+        width: 300px;
+
+        margin-top: 5%;
+        margin-left: 13%;
+        
+    }
+}
+
+@media(max-width: 280px){
+    .scoreDiv{
+        margin-top: 5%;
+        margin-left: 20%;
+    }
+    .screenOver{
+
+        width: 250px;
+
+        margin-top: 5%;
+        margin-left: 5%;
+        
+    }
+    
+}
+
+
+
+
 
 @keyframes pipe-animation{
     from{
