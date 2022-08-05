@@ -88,8 +88,8 @@
 @media (max-width: 912px) {
 
     .scoreDiv{
-        margin-top: 5%;
-        margin-left: 35%;
+        margin-top: 10%;
+        margin-left: 40%;
     }
     .screenOver{
 
@@ -125,7 +125,7 @@
     
 
     .scoreDiv{
-        margin-top: 5%;
+        margin-top: 10%;
         margin-left: 35%;
     }
     .screenOver{
@@ -161,15 +161,15 @@
 
 @media(max-width: 414px){
     .scoreDiv{
-        margin-top: 5%;
-        margin-left: 25%;
+        margin-top: 10%;
+        margin-left: 28%;
     }
     .screenOver{
 
         width: 300px;
 
         margin-top: 5%;
-        margin-left: 13%;
+        margin-left: 10%;
         
     }
 }
