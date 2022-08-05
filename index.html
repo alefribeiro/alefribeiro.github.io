@@ -13,15 +13,24 @@
 </head>
 <body>
     <div class="game-board">
+
+        
         
         <img src="./images/clouds.png" class = "clouds" alt="">
         <img src="./images/mario.gif" class="mario" alt="">
-        <img src="./images/pipe.png" class="pipe" alt="">
+        <img src="./images/pipe.png" class="pipe invisible" alt="">
         <div class="scoreDiv"></div>
         <div class="screenOver invisible">
             <p></p>
-            <button onclick="addInvisible()">
+            <button onclick="restart()">
                 Reiniciar
+            </button>
+        </div>
+        <div class="start">
+            <p>Como jogar PC: aperte qualquer botão para pular;</p>
+            <p>Como jogar mobile: toque na tela para pular.</p>
+            <button onclick="addInvisible()">
+                Começar
             </button>
         </div>
     </div>

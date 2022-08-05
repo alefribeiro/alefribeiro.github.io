@@ -22,10 +22,11 @@ body{
 }
 
 .pipe{
+    
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: none;
 }
 
 .mario{
@@ -47,7 +48,7 @@ body{
 
 .scoreDiv{
     position: absolute;
-    width: 150px;
+    width: 200px;
     height: 75px;
     background: rgb(243, 243, 40);
     border-radius: 10px;
@@ -87,6 +88,34 @@ body{
     box-shadow: 2px 2px 2px black;
 }
 
+.start{
+
+    
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    text-align: center;
+    background: rgb(243, 243, 40);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 5%;
+    margin-left: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem
+
+}
+
+.start button{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+}
+
 .invisible{
     display: none;
 }
@@ -111,11 +140,16 @@ footer{
     }
     .screenOver{
 
-
         margin-top: 5%;
         margin-left: 25%;
         
     }
+
+    .start{
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+
 }
 
 @media (max-width:540px) {
@@ -124,7 +158,8 @@ footer{
         position: absolute;
         bottom: 0;
         width: 40px;
-        animation: pipe-animation 1.5s infinite linear;
+        animation: none;
+        /* animation: pipe-animation 1.5s infinite linear; */
     }
     
     .mario{
@@ -148,6 +183,10 @@ footer{
         margin-top: 5%;
         margin-left: 13%;
         
+    }
+    .start{
+        margin-top: 5%;
+        margin-left: 13%;
     }
 
     @keyframes jumpMobile{
@@ -187,6 +226,12 @@ footer{
         margin-left: 10%;
         
     }
+    .start{
+        width: 300px;
+
+        margin-top: 5%;
+        margin-left: 10%;
+    }
 }
 
 @media(max-width: 280px){
@@ -201,6 +246,12 @@ footer{
         margin-top: 5%;
         margin-left: 5%;
         
+    }
+    .start{
+        width: 250px;
+
+        margin-top: 5%;
+        margin-left: 5%;
     }
     
 }
