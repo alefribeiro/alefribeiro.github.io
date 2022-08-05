@@ -3,6 +3,8 @@ const pipe = document.querySelector('.pipe')
 const scoreDiv = document.querySelector('.scoreDiv')
 const screenOver = document.querySelector('.screenOver')
 const pScreenOver = document.querySelector('.screenOver p')
+const widthSecreen = window.screen.width;
+
 let score = 0
 let gameOver = "win"
 
@@ -29,27 +31,50 @@ const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
+    if(widthSecreen > 540){
+        if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
 
-    if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
+            pipe.style.animation = 'none';
+            pipe.style.left = `${pipePosition}px`
+            mario.style.animation = 'none';
+            mario.style.bottom = `${marioPosition}px`
 
-        pipe.style.animation = 'none';
-        pipe.style.left = `${pipePosition}px`
-        mario.style.animation = 'none';
-        mario.style.bottom = `${marioPosition}px`
+            mario.src = ('./images/game-over.png')
+            mario.style.width = '75px'
+            mario.style.marginLeft = '50px'
 
-        mario.src = ('./images/game-over.png')
-        mario.style.width = '75px'
-        mario.style.marginLeft = '50px'
+            gameOver ="gameOver"
+            theEnd(gameOver)
 
-        gameOver ="gameOver"
-        theEnd(gameOver)
+            clearInterval(loop)
 
-        clearInterval(loop)
+        }else if(gameOver === "win"){
+            score += 0.5     
+            scoreDiv.innerHTML = `Score ${score.toFixed(0)}`
+        }
+    }else{
+        if(pipePosition <= 70 && pipePosition > 0 && marioPosition < 40){
 
-    }else if(gameOver === "win"){
-        score += 0.5     
-        scoreDiv.innerHTML = `Score ${score.toFixed(0)}`
+            pipe.style.animation = 'none';
+            pipe.style.left = `${pipePosition}px`
+            mario.style.animation = 'none';
+            mario.style.bottom = `${marioPosition}px`
+
+            mario.src = ('./images/game-over.png')
+            mario.style.width = '40px'
+            mario.style.marginLeft = '25px'
+
+            gameOver ="gameOver"
+            theEnd(gameOver)
+
+            clearInterval(loop)
+
+        }else if(gameOver === "win"){
+            score += 0.5     
+            scoreDiv.innerHTML = `Score ${score.toFixed(0)}`
+        }
     }
+    
 
 }, 10)
 

@@ -104,6 +104,26 @@
 }
 
 @media (max-width:540px) {
+
+    .pipe{
+        position: absolute;
+        bottom: 0;
+        width: 40px;
+        animation: pipe-animation 1.5s infinite linear;
+    }
+    
+    .mario{
+        width: 75px;
+        position: absolute;
+        bottom: 0;
+        
+    }
+    
+    .jump{
+        animation: jumpMobile 500ms ease-out;
+    }
+    
+
     .scoreDiv{
         margin-top: 5%;
         margin-left: 35%;
@@ -113,6 +133,28 @@
         margin-top: 5%;
         margin-left: 13%;
         
+    }
+
+    @keyframes jumpMobile{
+        0%{
+            bottom: 0;
+        }
+    
+        40%{
+            bottom: 90px;
+        }
+    
+        50%{
+            bottom: 90px;
+        }
+    
+        60%{
+            bottom: 90px;
+        }
+    
+        100%{
+            bottom: 0;
+        }
     }
     
 }
